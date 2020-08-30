@@ -3,7 +3,7 @@
     widget.find('.color-picker').not('[id*="__i__"]').wpColorPicker({
       change: _.throttle(function() {
         $(this).trigger('change');
-      }, 3000)
+      }, )
     });
   }
 
