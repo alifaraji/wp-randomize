@@ -44,7 +44,7 @@ Go to your dashboard and select "add new" from plugins setting page. Search "Adv
 You can install this plugin by downloading zip file and uploading it to "plugins" directory as well.
 
 == Frequently Asked Questions ==
-How can I add this widget to sidebar?
+= How can I add this widget to sidebar? =
 From "Dashboard -> Appearance -> widgets" you can add and configure this widget.
 
 == Screenshots ==

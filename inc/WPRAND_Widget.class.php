@@ -10,10 +10,10 @@ class WPRAND_Widget extends WP_Widget
     {
         $widget_ops = array(
                 'classname'                   => 'widget_recent_entries',
-                'description'                 => esc_attr__('Display categories and posts randomly.', 'wprand-widget'),
+                'description'                 => esc_attr__('Display categories and posts randomly.', 'wp-randomize'),
                 'customize_selective_refresh' => true,
             );
-        parent::__construct('wprand-widget', esc_attr__('WP Randomize', 'wprand-widget'), $widget_ops);
+        parent::__construct('wp-randomize', esc_attr__('WP Randomize', 'wp-randomize'), $widget_ops);
         $this->alt_option_name = 'wprand_widget';
 
 
@@ -61,13 +61,13 @@ class WPRAND_Widget extends WP_Widget
 
 
 
-        echo $before_title . apply_filters('widget_title', ! empty($randomise) ? ($pre_title ? $pre_title : '') . get_cat_name($randomise) : esc_attr__('Random Categories', 'wprand-widget')) . $after_title;
+        echo $before_title . apply_filters('widget_title', ! empty($randomise) ? ($pre_title ? $pre_title : '') . get_cat_name($randomise) : esc_attr__('Random Categories', 'wp-randomize')) . $after_title;
 
         $text_color = ! empty($instance['text_color']) ? 'style="color:'.$instance['text_color'] .';"' : '';
         $link_color = ! empty($instance['link_color']) ? 'style="color:'.$instance['link_color'] .';"' : '';
 
         $query = new WP_Query($arguments);
-        echo '<div id="wprand-widget" '.$text_color.'>';
+        echo '<div id="wp-randomize" '.$text_color.'>';
 
         if ($randomise && $query->have_posts()) {
             ?>
@@ -83,7 +83,7 @@ class WPRAND_Widget extends WP_Widget
               <?php
         } else {
             ?>
-              <p><?php echo esc_attr__('There are no posts matching criteria. Please configure widget&#8217;s settings.', 'wprand-widget') ?></p>
+              <p><?php echo esc_attr__('There are no posts matching criteria. Please configure widget&#8217;s settings.', 'wp-randomize') ?></p>
             <?php
         }
 
@@ -128,7 +128,7 @@ class WPRAND_Widget extends WP_Widget
         $before_title     = !empty($instance['before_title']) ? $instance['before_title'] : '';
         $after_title      = !empty($instance['after_title']) ? $instance['after_title'] : ''; ?>
 
-        <p><?php echo wp_kses_post(__('<strong>Select categories</strong> which you want to display randomly:', 'wprand-widget')) ?></p>
+        <p><?php echo wp_kses_post(__('<strong>Select categories</strong> which you want to display randomly:', 'wp-randomize')) ?></p>
         <p>
           <?php
         $catlist = array();
@@ -141,55 +141,55 @@ class WPRAND_Widget extends WP_Widget
    		<?php
         endforeach; ?>
         <p>
-          <label for="<?php echo $this->get_field_id('max_post') ?>"><?php echo esc_attr__('Maximum Post Number: ', 'wprand-widget') ?></label>
+          <label for="<?php echo $this->get_field_id('max_post') ?>"><?php echo esc_attr__('Maximum Post Number: ', 'wp-randomize') ?></label>
           <input type="number" class="tiny-text" step="1" min="1" size="3" id="<?php echo $this->get_field_id('max_post') ?>" name="<?php echo $this->get_field_name('max_post') ?>" class="max_post" value="<?php echo esc_attr($max_post) ?>" />
         </p>
         <p>
           <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('post_rand') ?>" name="<?php echo $this->get_field_name('post_rand') ?>"<?php checked($post_rand) ?> />
-          <label for="<?php echo $this->get_field_id('post_rand') ?>"><?php echo esc_attr__('Display Posts Randomly', 'wprand-widget') ?></label>
+          <label for="<?php echo $this->get_field_id('post_rand') ?>"><?php echo esc_attr__('Display Posts Randomly', 'wp-randomize') ?></label>
         </p>
-        <p><?php echo esc_attr__('If not checked, Recent posts of each category will be displayed.', 'wprand-widget') ?></p>
+        <p><?php echo esc_attr__('If not checked, Recent posts of each category will be displayed.', 'wp-randomize') ?></p>
       </p>
 
         <br />
-        <h4><?php echo esc_attr__('Display', 'wprand-widget') ?></h4>
+        <h4><?php echo esc_attr__('Display', 'wp-randomize') ?></h4>
         <hr />
-        <p><?php echo esc_attr__('You can change widget&#8217;s Display settings here.', 'wprand-widget') ?></p>
+        <p><?php echo esc_attr__('You can change widget&#8217;s Display settings here.', 'wp-randomize') ?></p>
         <p>
-          <label for="<?php echo $this->get_field_id('link_color') ?>"><?php echo esc_attr__('Link Color: ', 'wprand-widget') ?></label>
+          <label for="<?php echo $this->get_field_id('link_color') ?>"><?php echo esc_attr__('Link Color: ', 'wp-randomize') ?></label>
           <input type="text" id="<?php echo $this->get_field_id('link_color') ?>" name="<?php echo $this->get_field_name('link_color') ?>" class="color-picker" value="<?php echo esc_attr($link_color) ?>" />
         </p>
         <p>
-          <label for="<?php echo $this->get_field_id('text_color') ?>"><?php echo esc_attr__('Text Color: ', 'wprand-widget') ?></label>
+          <label for="<?php echo $this->get_field_id('text_color') ?>"><?php echo esc_attr__('Text Color: ', 'wp-randomize') ?></label>
           <input type="text" id="<?php echo $this->get_field_id('text_color') ?>" name="<?php echo $this->get_field_name('text_color') ?>" class="color-picker" value="<?php echo esc_attr($text_color) ?>" />
         </p>
         <p>
           <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('display_excerpt') ?>" name="<?php echo $this->get_field_name('display_excerpt') ?>"<?php checked($display_excerpt) ?> />
-          <label for="<?php echo $this->get_field_id('display_excerpt') ?>"><?php echo esc_attr__('Display Posts Excerpt', 'wprand-widget') ?></label>
+          <label for="<?php echo $this->get_field_id('display_excerpt') ?>"><?php echo esc_attr__('Display Posts Excerpt', 'wp-randomize') ?></label>
         </p>
         <p>
-          <label for="<?php echo $this->get_field_name('pre_title') ?>"><?php echo esc_attr__('Text before widget title:', 'wprand-widget') ?></label>
-          <input class="widefat" placeholder="<?php echo esc_attr__('e.g. Random Category:', 'wprand-widget') ?>" id="<?php echo $this->get_field_id('pre_title') ?>" name="<?php echo $this->get_field_name('pre_title') ?>" type="text" value="<?php echo esc_attr($pre_title) ?>" />
+          <label for="<?php echo $this->get_field_name('pre_title') ?>"><?php echo esc_attr__('Text before widget title:', 'wp-randomize') ?></label>
+          <input class="widefat" placeholder="<?php echo esc_attr__('e.g. Random Category:', 'wp-randomize') ?>" id="<?php echo $this->get_field_id('pre_title') ?>" name="<?php echo $this->get_field_name('pre_title') ?>" type="text" value="<?php echo esc_attr($pre_title) ?>" />
         </p>
 
         <br />
-        <h4><?php echo esc_attr__('Advanced Settings', 'wprand-widget') ?></h4>
+        <h4><?php echo esc_attr__('Advanced Settings', 'wp-randomize') ?></h4>
         <hr />
-        <p><?php echo wp_kses_post(__('<strong>Notice:</strong> These settings are used to change widget&#8217;s template. If you are not sure how to use them, Please left them empty and do not change anything.', 'wprand-widget')) ?></p>
+        <p><?php echo wp_kses_post(__('<strong>Notice:</strong> These settings are used to change widget&#8217;s template. If you are not sure how to use them, Please left them empty and do not change anything.', 'wp-randomize')) ?></p>
         <p>
-        <label for="<?php echo $this->get_field_id('before_widget') ?>"><?php echo esc_attr__('Before Widget HTML opening Tags:', 'wprand-widget') ?></label>
+        <label for="<?php echo $this->get_field_id('before_widget') ?>"><?php echo esc_attr__('Before Widget HTML opening Tags:', 'wp-randomize') ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('before_widget') ?>" name="<?php echo $this->get_field_name('before_widget') ?>" type="text" value="<?php echo esc_html($before_widget) ?>">
         </p>
         <p>
-        <label for="<?php echo $this->get_field_id('after_widget') ?>"><?php echo esc_attr__('After Widget HTML closing Tags:', 'wprand-widget') ?></label>
+        <label for="<?php echo $this->get_field_id('after_widget') ?>"><?php echo esc_attr__('After Widget HTML closing Tags:', 'wp-randomize') ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('after_widget') ?>" name="<?php echo $this->get_field_name('after_widget') ?>" type="text" value="<?php echo esc_html($after_widget) ?>">
         </p>
         <p>
-        <label for="<?php echo $this->get_field_id('before_title') ?>"><?php echo esc_attr__('Before Title HTML opening Tags:', 'wprand-widget') ?></label>
+        <label for="<?php echo $this->get_field_id('before_title') ?>"><?php echo esc_attr__('Before Title HTML opening Tags:', 'wp-randomize') ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('before_title') ?>" name="<?php echo $this->get_field_name('before_title') ?>" type="text" value="<?php echo esc_html($before_title) ?>">
         </p>
         <p>
-        <label for="<?php echo $this->get_field_id('after_title') ?>"><?php echo esc_attr__('After Title HTML closing Tags:', 'wprand-widget') ?></label>
+        <label for="<?php echo $this->get_field_id('after_title') ?>"><?php echo esc_attr__('After Title HTML closing Tags:', 'wp-randomize') ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('after_title') ?>" name="<?php echo $this->get_field_name('after_title') ?>" type="text" value="<?php echo esc_html($after_title) ?>">
         </p>
          <?php

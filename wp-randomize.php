@@ -10,8 +10,7 @@
  * Author URI:        https://wpvar.com/
  * License:           GNU Public License v3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       wprand-widget
- * Domain Path:       /languages
+ * Text Domain:       wp-randomize
  * @package WPRAND
  */
 
@@ -40,5 +39,5 @@ function wprand_load_colorpicker($hook)
 }
 function wprand_load_text_domain()
 {
-    load_plugin_textdomain('wprand-widget');
+    load_plugin_textdomain('wp-randomize');
 }
