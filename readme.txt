@@ -31,7 +31,7 @@ This widget displays selected categories randomly with their posts. You can choo
 ## Contribute
 
 You can contribute to this plugin from Github:
-* [https://github.com/alifaraji/wp-randomize](WP Randomize Github Repository)
+* [WP Randomize Github Repository](https://github.com/alifaraji/wp-randomize)
 
 You can always contact us at this email:
 
