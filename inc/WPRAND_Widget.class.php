@@ -128,7 +128,7 @@ class WPRAND_Widget extends WP_Widget
         $before_title     = !empty($instance['before_title']) ? $instance['before_title'] : '';
         $after_title      = !empty($instance['after_title']) ? $instance['after_title'] : ''; ?>
 
-        <p><?php echo wp_kses_post(__('<strong>Select categories</strong> wich you want to display randomly:', 'wprand-widget')) ?></p>
+        <p><?php echo wp_kses_post(__('<strong>Select categories</strong> which you want to display randomly:', 'wprand-widget')) ?></p>
         <p>
           <?php
         $catlist = array();
