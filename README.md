@@ -38,11 +38,11 @@ From "Dashboard -> Appearance -> widgets" you can add and configure this widget.
 
 ## Screenshots
 
-![ Image 1](https://ps.w.org/wp-randomize/assets/screenshot-1.png?rev=2372750)
-![ Image 2](https://ps.w.org/wp-randomize/assets/screenshot-2.png?rev=2372750)
-![ Image 3](https://ps.w.org/wp-randomize/assets/screenshot-3.png?rev=2372750)
-![ Image 4](https://ps.w.org/wp-randomize/assets/screenshot-4.png?rev=2372750)
-![ Image 5](https://ps.w.org/wp-randomize/assets/screenshot-5.png?rev=2372750)
+* ![ Image 1](https://ps.w.org/wp-randomize/assets/screenshot-1.png?rev=2372750)
+* ![ Image 2](https://ps.w.org/wp-randomize/assets/screenshot-2.png?rev=2372750)
+* ![ Image 3](https://ps.w.org/wp-randomize/assets/screenshot-3.png?rev=2372750)
+* ![ Image 4](https://ps.w.org/wp-randomize/assets/screenshot-4.png?rev=2372750)
+* ![ Image 5](https://ps.w.org/wp-randomize/assets/screenshot-5.png?rev=2372750)
 
 ## Changelog
 1.0.0
