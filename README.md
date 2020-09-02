@@ -1,19 +1,8 @@
-=== WP Randomize - Advanced Random Categories & Posts Widget ===
-Contributors: wpvar, farajiali
-Tags: category, posts, post, widget, widgets, recent posts, random category, random posts, random categories
-Donate link: https://wpvar.com
-Requires at least: 4.4
-Tested up to: 5.5
-Requires PHP: 5.3
-Stable tag: 1.0.0
-License: GNU Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+## WP Randomize - Advanced Random Categories & Posts Widget
 
-You can display categories and posts randomly with this widget.
-
-== Description ==
 "WP Randomize" adds a powerful widget to your wordpress which you can fully customize it.
 This widget displays selected categories randomly with their posts. You can choose to display posts inside each category randomly as well.
+This plugin is developed by [wpvar.com](https://wpvar.com).
 
 ## Features
 
@@ -39,21 +28,22 @@ You can always contact us at this email:
 
 Please ask your support related questions in plugin's support forum.
 
-== Installation ==
+## Installation
 Go to your dashboard and select "add new" from plugins setting page. Search "Advance Random Categories & Posts", Install and activate it.
 You can install this plugin by downloading zip file and uploading it to "plugins" directory as well.
 
-== Frequently Asked Questions ==
-= How can I add this widget to sidebar? =
+## Frequently Asked Questions
+### How can I add this widget to sidebar?
 From "Dashboard -> Appearance -> widgets" you can add and configure this widget.
 
-== Screenshots ==
-1. Widget Content
-2. Widget Content
-3. Widget Settings
-4. Widget Settings
-5. Widget Settings
+## Screenshots
 
-== Changelog ==
+![ Image 1](https://ps.w.org/wp-randomize/assets/screenshot-1.png?rev=2372750)
+![ Image 2](https://ps.w.org/wp-randomize/assets/screenshot-2.png?rev=2372750)
+![ Image 3](https://ps.w.org/wp-randomize/assets/screenshot-3.png?rev=2372750)
+![ Image 4](https://ps.w.org/wp-randomize/assets/screenshot-4.png?rev=2372750)
+![ Image 5](https://ps.w.org/wp-randomize/assets/screenshot-5.png?rev=2372750)
+
+## Changelog
 1.0.0
 Hello World!
